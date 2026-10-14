@@ -1,0 +1,19 @@
+# Build results and local backups
+result
+result-*
+*.bak
+*.backup
+.direnv/
+
+# Common secret files; still manually review before pushing
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+
+# Editor noise
+*.swp
+*.swo
+.DS_Store
