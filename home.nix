@@ -20,6 +20,7 @@
     lazygit
     bat
     eza
+    nodejs_24
   ];
 
   programs.zsh = {
