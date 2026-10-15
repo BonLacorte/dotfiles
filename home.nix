@@ -10,6 +10,14 @@
     hello
     git
     jq
+    tmux
+    neovim
+    fzf
+    ripgrep
+    fd
+    lazygit
+    bat
+    eza
   ];
 
   programs.zsh = {
