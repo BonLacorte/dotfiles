@@ -6,6 +6,8 @@
 
   programs.home-manager.enable = true;
 
+  xdg.configFile."nvim".source = ./home/nvim;
+
   home.packages = with pkgs; [
     hello
     git
