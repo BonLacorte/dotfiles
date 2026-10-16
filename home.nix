@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.username = "costa";
   home.homeDirectory = "/home/costa";
@@ -6,7 +6,9 @@
 
   programs.home-manager.enable = true;
 
-  xdg.configFile."nvim".source = ./home/nvim;
+  xdg.configFile."nvim".source =
+  config.lib.file.mkOutOfStoreSymlink
+    "${config.home.homeDirectory}/.dotfiles/home/nvim";
 
   home.packages = with pkgs; [
     hello
