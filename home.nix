@@ -44,11 +44,28 @@
     };
   };
 
+  programs.git = {
+    enable = true;    
+
+    settings = {
+      user = {
+        name = "bonlacorte";
+        email = "lacorteflorencebon@gmail.com";
+      };
+    };
+  };
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
     settings = {
       add_newline = false;
+      format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
+      character = {
+	success_symbol = "[>](purlple)";
+        error_symbol = "[>](red)";
+      };
+      cmd_duration.format = "[$duration]($style) ";
     };
   };
 }
