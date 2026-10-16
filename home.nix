@@ -28,10 +28,19 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    initContent = ''
+      bindkey '^f' autosuggest-accept
+    '';
     shellAliases = {
       ll = "ls -lah";
       gs = "git status";
       rebuild = "$HOME/.dotfiles/rebuild.sh";
+      ".." = "cd ..";
+      add = "git add .";
+      push = "git push";
+      pull = "git pull";
+      m = "git switch main";
+      co = "codex --full-auto"; 
     };
   };
 
