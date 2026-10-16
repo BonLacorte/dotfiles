@@ -1,4 +1,3 @@
-
 local keymap = vim.keymap.set
 
 -- Save the current file
@@ -20,4 +19,3 @@ keymap('n', '<leader>a', 'ggVG', {
 keymap('n', '<leader>h', '<cmd>nohlsearch<CR>', {
   desc = 'Clear search highlights',
 })
-

@@ -1,4 +1,3 @@
-
 -- Leader key: Space
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -32,4 +31,3 @@ vim.fn.mkdir(vim.fn.stdpath('state') .. '/undo', 'p')
 
 -- Code editing
 opt.wrap = false
-
