@@ -17,3 +17,8 @@ secrets/
 *.swp
 *.swo
 .DS_Store
+
+# tmux debugging logs
+tmux-client-*.log
+tmux-server-*.log
+tmux-out-*.log
