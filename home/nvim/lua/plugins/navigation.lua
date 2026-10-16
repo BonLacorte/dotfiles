@@ -1,0 +1,49 @@
+
+return {
+  -- Oil.nvim: Browse files and folders
+  {
+    'stevearc/oil.nvim',
+    opts = {
+      view_options = {
+        show_hidden = true,
+      },
+    },
+    keys = {
+      {
+        '<leader>e',
+        '<cmd>Oil<CR>',
+        desc = 'File Browser',
+      },
+    },
+  },
+
+  -- Snacks.nvim: Fuzzy finding and search
+  {
+    'folke/snacks.nvim',
+    priority = 1000,
+    lazy = false,
+    opts = {
+      picker = { enabled = true },
+      notifier = { enabled = true },
+      input = { enabled = true },
+    },
+    keys = {
+      {
+        '<leader>f',
+        function() Snacks.picker.files() end,
+        desc = 'Find Files',
+      },
+      {
+        '<leader>s',
+        function() Snacks.picker.grep() end,
+        desc = 'Search Text',
+      },
+      {
+        '<leader>b',
+        function() Snacks.picker.buffers() end,
+        desc = 'Switch Buffers',
+      },
+    },
+  },
+}
+
