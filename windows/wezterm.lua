@@ -6,6 +6,7 @@ config.default_domain = 'WSL:Ubuntu'
 
 -- Rosé Pine Moon appearance
 config.color_scheme = 'rose-pine-moon'
+config.font = wezterm.font('Hack Nerd Font Mono')
 config.font_size = 13.0
 
 -- Subtle transparency
