@@ -10,6 +10,10 @@
   config.lib.file.mkOutOfStoreSymlink
     "${config.home.homeDirectory}/.dotfiles/home/nvim";
 
+  xdg.configFile."herdr/config.toml".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/.dotfiles/home/herdr/config.toml";
+
   home.packages = with pkgs; [
     hello
     git
