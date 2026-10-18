@@ -14,6 +14,26 @@
     config.lib.file.mkOutOfStoreSymlink
       "${config.home.homeDirectory}/.dotfiles/home/herdr/config.toml";
 
+
+  # Shared global agent instructions
+  home.file.".claude/CLAUDE.md".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/.dotfiles/home/AGENTS.md";
+
+  home.file.".codex/AGENTS.md".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/.dotfiles/home/AGENTS.md";
+
+  home.file.".config/opencode/AGENTS.md".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/.dotfiles/home/AGENTS.md";
+
+  # Kun's Claude Code settings
+  home.file.".claude/settings.json".source =
+    config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/.dotfiles/home/.claude/settings.json";
+
+
   home.packages = with pkgs; [
     hello
     git
@@ -27,6 +47,7 @@
     bat
     eza
     nodejs_24
+    codex
   ];
 
   programs.zsh = {
@@ -46,7 +67,8 @@
       push = "git push";
       pull = "git pull";
       m = "git switch main";
-      co = "codex --full-auto"; 
+      co = "codex --full-auto";
+      cc = "claude --dangerously-skip-permissions";
     };
   };
 
